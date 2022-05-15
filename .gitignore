@@ -127,6 +127,7 @@ __pypackages__/
 # Celery stuff
 celerybeat-schedule
 celerybeat.pid
+erl_crash.dump
 
 # SageMath parsed files
 *.sage.py
