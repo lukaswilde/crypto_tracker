@@ -1,10 +1,12 @@
-from celery import shared_task
+from typing import Any
+
 import requests
+from celery import shared_task
 
 
 @shared_task
-def get_current_token_price(token):
-    parameters = {
+def get_current_token_price(token: str) -> Any:
+    parameters: dict[str, str | bool] = {
         "ids": token,
         "vs_currencies": "eur",
         "include_market_cap": True,
