@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MypyConfigService">
+    <option name="customMypyPath" value="$USER_HOME$/miniconda3/envs/python-linters/bin/mypy" />
+    <option name="mypyArguments" value="--disallow-untyped-decorators --disallow-incomplete-defs --disallow-untyped-defs --disallow-untyped-calls --python-executable /Users/lukas/miniconda3/envs/crypto/bin/python" />
+  </component>
+</project>
