@@ -3,6 +3,8 @@ Celery settings
 """
 
 # Celery setting
+import os
+
 CELERY_BROKER_URL = "amqp://django:test@localhost:5672/django_vhost"
 CELERY_RESULT_BACKEND = "db+postgresql+psycopg2://lukas:@localhost/lukas"
 
@@ -35,7 +37,7 @@ SECRET_KEY = (
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -66,7 +68,7 @@ ROOT_URLCONF = "crypto_tracker.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "crypto_tracker/../templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
